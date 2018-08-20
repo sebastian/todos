@@ -1,0 +1,49 @@
+name: todos
+version: 0.0.1
+github: sebastian/todos
+author: Sebastian Probst Eide
+
+dependencies:
+  - base >= 4.7 && < 5
+  - trifecta
+  - parsers
+  - bytestring
+  - split
+  - lens
+  - directory
+
+ghc-options:
+  - -Wall
+  - -Wcompat
+  - -Wincomplete-record-updates
+  - -Wincomplete-uni-patterns
+  - -Wredundant-constraints
+  - -fno-warn-orphans
+  - -fno-warn-unused-do-bind
+
+default-extensions:
+  - OverloadedStrings
+  - QuasiQuotes
+  - TemplateHaskell
+
+library:
+  source-dirs: src
+  exposed-modules:
+    - Todo
+    - FileScanner
+
+executables:
+  todos:
+    source-dirs: exe
+    main: Main.hs
+    dependencies:
+      - todos
+
+tests:
+  spec:
+    main: Spec.hs
+    source-dirs:
+      - test
+      - src
+    dependencies:
+      - hspec == 2.*

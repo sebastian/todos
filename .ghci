@@ -1,0 +1,9 @@
+:set prompt "> "
+:set -isrc
+:set -XOverloadedStrings
+
+:module Data.ByteString
+:module Text.Trifecta
+:module Text.Parser.Combinators
+
+:load Todo

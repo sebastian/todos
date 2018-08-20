@@ -1,0 +1,4 @@
+.stack-work
+.hspec-failures
+.DS_Store
+todos.cabal
